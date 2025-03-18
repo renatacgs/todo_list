@@ -49,7 +49,7 @@ class _LoginPageState extends State<LoginPage> {
         _showMessage("Cadastro finalizado! Faça o login.");
         _toggleMode();
       } else {
-        _showMessage("E-mail já cadastrado.");
+        _showMessage("E-mail já foi cadastrado.");
       }
     }
   }
@@ -74,7 +74,7 @@ class _LoginPageState extends State<LoginPage> {
               TextField(controller: _passwordController, obscureText: true, decoration: InputDecoration(labelText: "Senha")),
               SizedBox(height: 20),
               ElevatedButton(onPressed: _authenticate, child: Text(_isLogin ? "Entrar" : "Cadastrar")),
-              TextButton(onPressed: _toggleMode, child: Text(_isLogin ? "Criar conta" : "Já tenho conta")),
+              TextButton(onPressed: _toggleMode, child: Text(_isLogin ? "Criar conta" : "Já tenho uma conta")),
             ],
           ),
         ),
@@ -152,7 +152,7 @@ class _HomePageState extends State<HomePage> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text("Tarefas do Dia"),
+        title: Text("Tarefas do dia"),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
